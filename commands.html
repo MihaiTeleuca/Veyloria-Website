@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse Veyloria economy, banking, market, business and support commands.">
+  <title>Commands - Veyloria</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Veyloria home">
+      <span class="brand-mark" aria-hidden="true">V</span>
+      <span>Veyloria</span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open navigation">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" data-nav>
+      <a href="index.html">Home</a>
+      <a class="active" href="commands.html">Commands</a>
+      <a href="premium.html">Premium</a>
+      <a href="tos.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="nav-cta" href="https://discord.com/oauth2/authorize?client_id=1514297852954677441&amp;permissions=7320258943110263&amp;integration_type=0&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Invite</a>
+      <a class="nav-cta ghost" href="https://discord.gg/2Trw25ZTxy" target="_blank" rel="noopener">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero compact">
+      <div>
+        <p class="eyebrow">Command catalog</p>
+        <h1>Commands</h1>
+        <p>Search the complete Veyloria command catalog imported from the economy command tracker. Use filters for module, access level and command mode.</p>
+      </div>
+    </section>
+
+    <section class="section command-section">
+      <div class="command-stats">
+        <div class="metric"><strong data-command-total>835</strong><span>commands loaded</span></div>
+        <div class="metric"><strong data-module-total>53</strong><span>economy modules</span></div>
+        <div class="metric"><strong data-visible-total>835</strong><span>visible results</span></div>
+      </div>
+
+      <div class="command-toolbar">
+        <label class="search-box">
+          <span>Search</span>
+          <input type="search" data-command-search placeholder="balance, market, business, premium, staff...">
+        </label>
+        <div class="select-grid">
+          <label>
+            <span>Module</span>
+            <select data-module-filter>
+              <option value="all">All modules</option>
+            </select>
+          </label>
+          <label>
+            <span>Access</span>
+            <select data-access-filter>
+              <option value="all">All access</option>
+              <option value="public">Public</option>
+              <option value="admin">Admin</option>
+              <option value="owner">Owner</option>
+            </select>
+          </label>
+          <label>
+            <span>Mode</span>
+            <select data-mode-filter>
+              <option value="all">Slash + prefix</option>
+              <option value="slash">Slash</option>
+              <option value="prefix">Prefix</option>
+            </select>
+          </label>
+        </div>
+        <div class="filter-row module-pills" data-module-pills aria-label="Quick module filters"></div>
+      </div>
+
+      <div class="commands-grid" data-command-list></div>
+      <div class="load-more-wrap">
+        <button class="button ghost" type="button" data-load-more>Load more commands</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Veyloria</span>
+    <span>Commands may change as the bot evolves.</span>
+  </footer>
+
+  <script src="assets/commands-data.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
